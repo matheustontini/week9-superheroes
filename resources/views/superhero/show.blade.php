@@ -1,4 +1,4 @@
-@extends('common/layout')
+@extends('main.layout')
 
 @section('content')
 <div class="page page-superhero">
@@ -27,7 +27,8 @@
     <section class="superhero-assign">
         <h2>Call a superhero</h2>
 
-        <form action="" method="post">
+        <form action="{{ action('SuperheroController@store') }}" method="post">
+            @csrf
 
             <input type="text" name="subject" placeholder="What's your crisis?">
 
