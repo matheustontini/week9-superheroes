@@ -13,8 +13,8 @@
 
 Route::get('/', function () {
     return view('selection');
-});
-Route::get('/home', 'HomeController@index')->name('home');
+})->name('index');
+
 
 Route::get('/superhero', 'SuperheroController@index');
 Route::get('/superhero/{id}', 'SuperheroController@show');
